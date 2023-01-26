@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color: #131516;
+}
+
+#wrapper{
+    width: 100vw;
+    overflow-x:hidden;
+    overflow-y: auto;
+}
+
+.container{
+    margin:0 auto;
+    width: 90%;
+    padding:10px;
+    height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    margin-top:30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.main .left-main{
+    display: grid;
+    justify-content: center;
+}
+
+.left-main .small-head{
+    color:#1788c0;
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 1em;
+}
+
+.left-main .large-head{
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    padding:0 0 20px 0;
+}
+
+.left-main .desc{
+    color: #5f5f5f;
+    font-weight:bold;
+}
+
+
+.main .right-main{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.right-main .big{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.823);
+    width: 300px;
+    height: 300px;
+    animation: move 50s infinite linear;
+}
+
+@keyframes move {
+    0% {
+    transform: rotate(0deg) ;
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+}
+
+.right-main .big .icon{
+    background-color: white;
+    width: 40px;
+    position: relative;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: outericon ease 25s infinite reverse;
+}
+
+@keyframes outericon {
+    0% {
+    transform: rotate(0deg) ;
+    }
+    100%{
+    transform: rotate(360deg);
+    }
+}
+
+
+.icon img{
+    width: 1.5rem;
+    
+}
+.apple{
+    top: -125px;
+}
+.amazon{
+    right:24px;
+}
+
+.google{
+    top:-125px;
+    left:96px;
+}
+
+.netflix{
+    top:124px;
+    left:65px;   
+}
+
+.microsoft{
+    top: 0px;
+    left:72px;
+}
+
+.meta{
+    bottom:-130px;
+    right:200px;
+}
+
+
+.right-main .big .middle{
+    width: 200px;
+    height:200px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #343738;
+}
+
+.middle .small{
+    position:relative;
+    width: 130px;
+    height: 130px;
+    background: #181a1c;
+    border-radius: 50%;
+    animation: innercircle 30s infinite linear;
+}
+
+.small div{
+    position: absolute;
+}
+.small img{
+    width:30px;
+    border-radius: 50%;
+}
+
+.small .flipkart{
+    top: 10px;
+}
+
+.small .linkedin{
+    left: 85px;
+}
+
+.small .ola{
+    top: 90px;
+}
+
+.small .adobe{
+    top:90px;
+    left: 90px;
+}
+
+@keyframes innercircle {
+    0% {
+    transform: rotate(0deg) ;
+    }
+    100%{
+    transform: rotate(-360deg);
+    }
+}
+
+
+@media only screen and (min-width:450px)  {
+    .main{
+        display: flex;
+    }
+
+    .left-main , .right-main{
+        width: 50%;
+    }
+    .right-main{
+        margin-top:0;
+    }
+}
